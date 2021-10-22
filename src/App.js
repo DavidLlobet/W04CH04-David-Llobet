@@ -11,7 +11,7 @@ function App() {
       ="row g-3 needs-validation" novalidate>
         <div className
         ="col-md-4">
-          <label for="validationCustom01" className
+          <label htmlFor="validationCustom01" className
           ="form-label">First name</label>
           <input
             type="text"
@@ -26,7 +26,7 @@ function App() {
       
         <div className
         ="col-md-4">
-          <label for="validationCustom02" className
+          <label htmlFor="validationCustom02" className
           ="form-label">Last name</label>
           <input
             type="text"
@@ -40,7 +40,7 @@ function App() {
         
             <div className
             ="row-md-4">
-          <label for="validationCustomUsername" className
+          <label htmlFor="validationCustomUsername" className
           ="form-label"
             >Birthday</label
           >
@@ -74,7 +74,7 @@ function App() {
       ="row g-3 needs-validation" novalidate>
         <div className
         ="col-md-4">
-          <label for="validationCustom01" className
+          <label htmlFor="validationCustom01" className
           ="form-label">Username</label>
           <input
             type="text"
@@ -89,7 +89,7 @@ function App() {
       
         <div className
         ="col-md-4">
-          <label for="validationCustom02" className
+          <label htmlFor="validationCustom02" className
           ="form-label">Password</label>
           <input
             type="text"
@@ -103,7 +103,7 @@ function App() {
         
             <div className
             ="row-md-4">
-          <label for="validationCustomUsername" className
+          <label htmlFor="validationCustomUsername" className
           ="form-label"
             >Repeat Password</label
           >
@@ -129,6 +129,11 @@ function App() {
       </div>         
       </form>
     </section>
+    <footer class="grid column">
+  <button>Previous</button>
+    <button>Next</button>
+
+  </footer>
     
 </>
   );
