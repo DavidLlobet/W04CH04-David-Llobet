@@ -1,10 +1,13 @@
-
+import Context from './context/Context';
 import './App.css';
-import PersonalData from './Personal data/Personal data';
+import PersonalData from './components/Personal data/Personal data';
 
 function App() {
   return (
-    <>
+    
+     <Context.Provider
+      value={{}}
+    >
          <PersonalData formName={"Personal data"} />
 
     <section className
@@ -69,8 +72,8 @@ function App() {
       </div>         
       </form>
     </section>
-    
-</>
+     </Context.Provider>
+
   );
 }
 
