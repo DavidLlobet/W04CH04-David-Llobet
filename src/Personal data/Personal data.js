@@ -1,21 +1,16 @@
 
-import './App.css';
-import PersonalData from './Personal data/Personal data';
-
-function App() {
+const PersonalData = ({ formName }) => {
   return (
-    <>
-         <PersonalData formName={"Personal data"} />
-
+    
     <section className
    ="personal-data">
-      <h2>Access data</h2>
+      <h2>{formName}</h2>
       <form className
       ="row g-3 needs-validation" novalidate>
         <div className
         ="col-md-4">
           <label for="validationCustom01" className
-          ="form-label">Username</label>
+          ="form-label">First name</label>
           <input
             type="text"
             className
@@ -30,7 +25,7 @@ function App() {
         <div className
         ="col-md-4">
           <label for="validationCustom02" className
-          ="form-label">Password</label>
+          ="form-label">Last name</label>
           <input
             type="text"
             className
@@ -45,7 +40,7 @@ function App() {
             ="row-md-4">
           <label for="validationCustomUsername" className
           ="form-label"
-            >Repeat Password</label
+            >Birthday</label
           >
           <div className
           ="input-group has-validation">
@@ -60,7 +55,7 @@ function App() {
             />
             
           </div>
-          
+          <div>Age</div>
         </div>
          <div className
          ="col-12">
@@ -70,8 +65,7 @@ function App() {
       </form>
     </section>
     
-</>
   );
-}
+};
 
-export default App;
+export default PersonalData;
