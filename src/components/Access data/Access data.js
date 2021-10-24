@@ -1,4 +1,10 @@
+import { useContext } from "react";
+import Context from "../../context/Context";
+
 const AccessData = ({formName}) => {
+
+    const { goBack, goForward} = useContext(Context);
+
     return (
         <section className
    ="personal-data">
@@ -36,12 +42,14 @@ const AccessData = ({formName}) => {
           </div>
           
         </div>
-         <div className
-         ="col-12">
-        <button className
-        ="btn btn-primary" type="submit">Submit form</button>
-      </div>         
+               
       </form>
+       <footer class="grid column">
+    
+    <button onClick={goBack}>Previous</button>
+    <button onClick={goForward}>Next</button>
+
+  </footer>
     </section>
     )
 }
