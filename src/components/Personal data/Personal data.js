@@ -8,7 +8,7 @@ const PersonalData = ({ formName }) => {
   return (
     
     <section className
-   ="personal-data">
+   ="personal-data row m-3">
       <h2>{formName}</h2>
       <form className
       ="row m-3 needs-validation" novalidate>
@@ -41,7 +41,7 @@ const PersonalData = ({ formName }) => {
 
             
           </div>
-        </div>
+        </div> 
 
       </form>
        <footer class="grid column">
