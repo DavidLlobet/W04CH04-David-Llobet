@@ -1,5 +1,4 @@
 import { useContext } from "react";
-import { useState } from "react";
 import Context from "../../context/Context";
 
 const PersonalData = ({ formName }) => {
@@ -11,16 +10,16 @@ const PersonalData = ({ formName }) => {
    ="personal-data row m-3">
       <h2>{formName}</h2>
       <form className
-      ="row m-3 needs-validation" novalidate>
-      <div class="col-4">
-    <label for="exampleInputEmail1">First name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required/>
+      ="row m-3 needs-validation" noValidate>
+      <div className="col-4">
+    <label htmlFor="exampleInputEmail1">First name</label>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required/>
    
   </div>
       
-       <div class="col-4">
-    <label for="exampleInputEmail1">Last name</label>
-    <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder=""  required/>
+       <div className="col-4">
+    <label htmlFor="exampleInputEmail1">Last name</label>
+    <input type="text" className="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder=""  required/>
    
   </div>
         
@@ -44,7 +43,7 @@ const PersonalData = ({ formName }) => {
         </div> 
 
       </form>
-       <footer class="grid column">
+       <footer className="grid column">
   
     <button onClick={goForward}>Next</button>
 
