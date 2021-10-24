@@ -10,20 +10,20 @@ const AccessData = ({formName}) => {
    ="personal-data">
       <h2>{formName}</h2>
       <form className
-      ="row g-3 needs-validation" novalidate>
+      ="row g-3 needs-validation" noValidate>
          <div class="form-group">
-    <label for="exampleInputEmail1">Username</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""/>
+    <label htmlFor="exampleInputEmail1">Username</label>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=""/>
    
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder=""/>
+  <div className="form-group">
+    <label htmlFor="exampleInputPassword1">Password</label>
+    <input type="password" className="form-control" id="exampleInputPassword1" placeholder=""/>
   </div>
         
             <div className
             ="row-md-4">
-          <label for="validationCustomUsername" className
+          <label htmlFor="validationCustomUsername" className
           ="form-label"
             >Repeat Password</label
           >
