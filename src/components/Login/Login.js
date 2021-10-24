@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useContext } from "react";
+import Context from "../../context/Context";
 
-const Login = ({formName}) => {    
+const Login = ({formName}) => {   
+    
+    const {goBack} = useContext(Context);
+
     return (
         <section className
    ="personal-data">
@@ -27,6 +31,10 @@ const Login = ({formName}) => {
         ="btn btn-primary" type="submit">Log in</button>
       </div>         
       </form>
+           <footer class="grid column">
+    
+    <button onClick={goBack}>Previous</button>
+  </footer>
     </section>
     )
 }

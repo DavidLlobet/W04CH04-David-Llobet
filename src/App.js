@@ -14,7 +14,6 @@ function App() {
       }
       
       const goForward = () => {
-        console.log('hi')
         setCount(count + 1)
       }
 
