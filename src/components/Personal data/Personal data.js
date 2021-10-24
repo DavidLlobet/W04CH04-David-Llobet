@@ -1,5 +1,10 @@
+import { useContext } from "react";
+import Context from "../../context/Context";
 
 const PersonalData = ({ formName }) => {
+    const { goForward } = useContext(Context);
+
+
   return (
     
     <section className
@@ -7,34 +12,17 @@ const PersonalData = ({ formName }) => {
       <h2>{formName}</h2>
       <form className
       ="row g-3 needs-validation" novalidate>
-        <div className
-        ="col-md-4">
-          <label for="validationCustom01" className
-          ="form-label">First name</label>
-          <input
-            type="text"
-            className
-            ="form-control"
-            id="validationCustom01"
-            value=""
-            required
-          />
-    
-        </div>
+      <div class="form-group">
+    <label for="exampleInputEmail1">First name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required/>
+   
+  </div>
       
-        <div className
-        ="col-md-4">
-          <label for="validationCustom02" className
-          ="form-label">Last name</label>
-          <input
-            type="text"
-            className
-            ="form-control"
-            id="validationCustom02"
-            value=""
-            required
-         />
-         </div>
+       <div class="form-group">
+    <label for="exampleInputEmail1">Last name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required/>
+   
+  </div>
         
             <div className
             ="row-md-4">
@@ -57,12 +45,13 @@ const PersonalData = ({ formName }) => {
           </div>
           <div>Age</div>
         </div>
-         <div className
-         ="col-12">
-        <button className
-        ="btn btn-primary" type="submit">Submit form</button>
-      </div>         
+ 
       </form>
+       <footer class="grid column">
+  
+    <button onClick={goForward}>Next</button>
+
+  </footer>
     </section>
     
   );

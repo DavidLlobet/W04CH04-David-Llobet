@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Context from './context/Context';
 import './App.css';
 import PersonalData from './components/Personal data/Personal data';
@@ -5,21 +6,28 @@ import AccessData from './components/Access data/Access data';
 import Login from './components/Login/Login';
 
 function App() {
+
+      const [count, setCount] = useState(0);
+
+      const goBack = () => {
+        setCount(count - 1)
+      }
+      
+      const goForward = () => {
+        console.log('hi')
+        setCount(count + 1)
+      }
+
   return (
 
-
-    
      <Context.Provider
-      value={{}}
+      value={{count, setCount, goBack, goForward}}
     >
-         <PersonalData formName={"Personal data"} />
-         <AccessData formName={"Access data"} />
-         <Login formName={"Login"} />
-               <footer class="grid column">
-  <button>Previous</button>
-    <button>Next</button>
-
-  </footer>
+      {count === 0 ? <PersonalData formName={"Personal data"}/> : ""}
+      {count === 1 ? <AccessData formName={"Access data"}/> : ""}
+      {count === 2 ? <Login formName={"Login"}/> : ""} 
+     
+ 
     
      </Context.Provider>
 
