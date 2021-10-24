@@ -5,13 +5,19 @@ import AccessData from './components/Access data/Access data';
 
 function App() {
   return (
+
+
     
      <Context.Provider
       value={{}}
     >
          <PersonalData formName={"Personal data"} />
          <AccessData formName={"Access data"} />
+               <footer class="grid column">
+  <button>Previous</button>
+    <button>Next</button>
 
+  </footer>
     
      </Context.Provider>
 
