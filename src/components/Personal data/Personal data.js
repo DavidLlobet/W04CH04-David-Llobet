@@ -1,10 +1,11 @@
+import { getByPlaceholderText } from "@testing-library/react";
 import { useContext } from "react";
+import { useState } from "react";
 import Context from "../../context/Context";
 
 const PersonalData = ({ formName }) => {
-    const { goForward } = useContext(Context);
-
-
+  const { goForward } = useContext(Context);
+    
   return (
     
     <section className
@@ -20,7 +21,7 @@ const PersonalData = ({ formName }) => {
       
        <div class="form-group">
     <label for="exampleInputEmail1">Last name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required/>
+    <input type="text" class="form-control" id="exampleInputEmail2" aria-describedby="emailHelp" placeholder=""  required/>
    
   </div>
         
@@ -38,7 +39,7 @@ const PersonalData = ({ formName }) => {
               className
               ="form-control"
               id="validationCustomUsername"
-              aria-describedby="inputGroupPrepend"
+              aria-describedby="inputGroupPrepend" placeholder=""
               required
             />
             
